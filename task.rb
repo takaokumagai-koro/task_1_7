@@ -6,7 +6,7 @@ def q1
 
   # 以下に回答を記載
   names.push("斎藤")
-  puts names[4]
+  p names[4]
 
 end
 
@@ -17,7 +17,7 @@ def q2
   # 以下に回答を記載
 
   array = array1 + array2
-  puts array
+  p array
 
 end
 
@@ -34,7 +34,7 @@ def q4
   # 以下に回答を記載
   
   sports.compact!
-  puts sports
+  p sports
 
 end
 
