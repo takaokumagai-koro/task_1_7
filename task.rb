@@ -2,11 +2,11 @@
 # 回答の出力を確認される際は，「ruby main.rb」をターミナルから実行して下さい。
 
 def q1
-  names = ["田中", "佐藤", "佐々木", "高橋", "斎藤"]
+  names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-  names = ["斎藤"]
-  puts names
+  names.push("斎藤")
+  puts names[4]
 
 end
 
@@ -16,7 +16,7 @@ def q2
 
   # 以下に回答を記載
 
-  array = [array1, array2]
+  array = array1 + array2
   puts array
 
 end
@@ -32,7 +32,8 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-  sports.delete(nil)
+  
+  sports.compact!
   puts sports
 
 end
@@ -43,11 +44,8 @@ def q5
 
   # 以下に回答を記載
  
-  if array1.size == 0
-    puts true
-  else
-    puts false
-  end
+  p array1.empty?
+  p array2.empty?
 
 end
 
@@ -55,7 +53,8 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-  p numbers1.map {|num| num * 10}
+  numbers2 = numbers1.collect{|x|x * 10}
+  p numbers2
 
 end
 
@@ -64,8 +63,7 @@ def q7
 
   # 以下に回答を記載
 
-
-  p array.map(&:to_i)
+  p array.map!(&:to_i)
 
 end
 
