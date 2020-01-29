@@ -71,7 +71,9 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-  programming_languages = programming_languages.map{|item| item.capitalize}
+
+
+  programming_languages.map!{|item| item.capitalize}
 
   upper_case_programming_languages = programming_languages.map{|item| item.upcase}
 
@@ -85,8 +87,8 @@ def q9
 
   # 以下に回答を記載
 
-  names.each.with_index do |name, i|
-    puts "会員No.#{i+1} #{name}"
+  names.each.with_index(1) do |name, i|
+    puts "会員No.#{i} #{name}"
   end
 
 
@@ -97,7 +99,16 @@ def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
+  puts foods
 
+
+
+  
+  if foods.include?("うに")
+    puts "好きです"
+  else
+    puts "まあまあ好きです"
+  end
 
 end
 
